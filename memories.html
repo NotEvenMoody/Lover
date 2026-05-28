@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memories</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Lato:wght@300;400;500&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="save-indicator" class="save-indicator" aria-live="polite"></div>
+
+  <button
+    type="button"
+    id="music-toggle"
+    class="music-toggle-btn"
+    aria-label="Upload background music"
+  >🎵</button>
+  <input
+    type="file"
+    id="audio-input"
+    class="music-file-input"
+    accept="audio/*"
+    hidden
+    aria-hidden="true"
+  />
+
+  <main class="page-content memories-page">
+    <h1 class="page-title">Memories</h1>
+
+    <section class="counter-card" aria-label="Relationship counter">
+      <h2>Day everything started 💖🫂</h2>
+      <div class="counter-grid">
+        <div class="counter-unit">
+          <span id="counter-days" class="counter-value">0</span>
+          <span class="counter-label">Days</span>
+        </div>
+        <div class="counter-unit">
+          <span id="counter-hours" class="counter-value">00</span>
+          <span class="counter-label">Hours</span>
+        </div>
+        <div class="counter-unit">
+          <span id="counter-mins" class="counter-value">00</span>
+          <span class="counter-label">Minutes</span>
+        </div>
+        <div class="counter-unit">
+          <span id="counter-secs" class="counter-value">00</span>
+          <span class="counter-label">Seconds</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="memory-buttons">
+      <div class="memory-btn-wrap">
+        <button type="button" id="btn-first-date" class="btn-first-date">
+          <span class="btn-first-date-label">First Date</span>
+        </button>
+        <span class="memory-date">27 / 2 / 2025</span>
+      </div>
+      <div class="memory-btn-wrap">
+        <button type="button" id="btn-bday-rumi" class="btn btn-filled memory-btn shape-soft memory-btn-glow">Ur first bday</button>
+        <span class="memory-date">15 / 8 / 2025</span>
+      </div>
+      <div class="memory-btn-wrap">
+        <button type="button" id="btn-bday-moody" class="btn-bday-moody">My first bday</button>
+        <span class="memory-date">13 / 11 / 2025</span>
+      </div>
+    </div>
+
+    <a href="message.html" id="nav-message" class="nav-to-message">Message for ya →</a>
+  </main>
+
+  <!-- Shared gallery modal -->
+  <div id="gallery-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Photo gallery">
+    <div class="modal-content">
+      <div id="gallery-swipe" class="gallery">
+        <div id="gallery-track" class="gallery-track"></div>
+      </div>
+      <div id="gallery-dots" class="gallery-dots"></div>
+      <button type="button" id="gallery-close-back" class="modal-close-back">← Back</button>
+      <button type="button" id="gallery-ring-btn" class="ring-nav-btn" aria-label="Go to ring page">💍</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/supabase-api.js"></script>
+  <script src="js/hearts.js"></script>
+  <script src="js/transitions.js"></script>
+  <script src="js/back-nav.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/memories.js"></script>
+</body>
+</html>

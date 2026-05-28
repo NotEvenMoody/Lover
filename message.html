@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Message for ya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Lato:wght@300;400;500&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="save-indicator" class="save-indicator" aria-live="polite"></div>
+
+  <main class="page-content message-page">
+    <h1 class="page-title">Message for ya</h1>
+    <textarea
+      id="love-message"
+      class="love-message-area"
+      aria-label="Love message"
+    ></textarea>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/supabase-api.js"></script>
+  <script src="js/hearts.js"></script>
+  <script src="js/transitions.js"></script>
+  <script src="js/back-nav.js"></script>
+  <script src="js/message-page.js"></script>
+</body>
+</html>

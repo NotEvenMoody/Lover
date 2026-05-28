@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ring</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Lato:wght@300;400;500&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="save-indicator" class="save-indicator" aria-live="polite"></div>
+
+  <main class="page-content ring-page">
+    <div class="ring-layout">
+      <h1 class="page-title">Ring</h1>
+
+      <div id="ring-image-zone" class="ring-image-zone">
+        <p id="ring-placeholder" class="ring-placeholder">Drop your ring photo here<br />or click to upload</p>
+        <input type="file" id="ring-file-input" class="ring-file-input" accept="image/*" aria-label="Upload ring image" />
+      </div>
+
+      <textarea
+        id="ring-message"
+        class="ring-message-area ring-message-fade-in"
+        rows="8"
+        aria-label="Ring message"
+      ></textarea>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/supabase-api.js"></script>
+  <script src="js/hearts.js"></script>
+  <script src="js/transitions.js"></script>
+  <script src="js/back-nav.js"></script>
+  <script src="js/ring-page.js"></script>
+</body>
+</html>
